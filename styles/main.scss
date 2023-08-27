@@ -16,3 +16,16 @@ body {
     rgba(163, 208, 219, 1) 100%
   );
 }
+
+/* styling for area that contains all tweets both new and posted */
+.calcBox {
+  background-color: #e1b15e;
+  display: flex;
+  justify-content: center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin-left: 3.5em;
+}
