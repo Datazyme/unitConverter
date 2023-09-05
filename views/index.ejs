@@ -18,27 +18,89 @@
   </head>
 
   <body>
-    <h1>Have fun! 🥔</h1>
-    <main class="calcBox">
-      <section class="calcBox">
-        <h2>Enter Units to Convert</h2>
+<header>
+    <div class="title">
+      <span style="--i:1">U</span>
+      <span style="--i:2">N</span>
+      <span style="--i:3">I</span>
+      <span style="--i:4">T</span>
+      <span style="--i:5">*</span>
+      <span style="--i:6">C</span>
+      <span style="--i:7">O</span>
+      <span style="--i:8">N</span>
+      <span style="--i:9">V</span>
+      <span style="--i:010">E</span>
+      <span style="--i:11">R</span>
+      <span style="--i:12">T</span>
+      <span style="--i:13">r</span>
+    </div>
+
+
+
+  </header>
+
+    <main>
+      <div class="tempBox">
+        <h2>Temperature</h2>
         <div class="error"></div>
         <form class="form-inline">
-          <label for="tweet-text"></label>
+          <label for="number-text"></label>
           <textarea
             name="text"
-            class="tweet"
-            id="tweet-text"
-            placeholder="What are you humming about?"
+            class="number"
+            id="number-text"
+            placeholder="Enter units to convert"
           ></textarea>
-          <div class="tweet-button">
-            <button type="submit" id="submitButton" onclick=>Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
         </form>
-      </section>
+        <div class="checkboxes">
+          <div class="input-group">
+           <label>From Farenheit</label>
+            <input type="checkbox" id="from-farenheit"/>
+          </div>
+          <div class="input-group">
+            <label>From Celsius</label>
+            <input type="checkbox" id="from-celsius"/>
+          </div>
+          <div class="input-group">
+           <label>To Farenheit</label>
+            <input type="checkbox" id="to-farenheit"/>
+          </div>
+          <div class="input-group">
+            <label>To Celsius</label>
+            <input type="checkbox" id="to-celsius"/>
+          </div>
+       </div>
+          <div class="submit-button">
+            <button type="submit" id="submitButton" onclick=>Submit</button>
+          </div>
+      </div>
+
+        <div class="length">
+          <h2>Length</h2>
+          <form class="form-inline">
+          <label for="length-text"></label>
+          <textarea
+            name="text-length"
+            class="length-input"
+            id="length-text"
+            placeholder="Enter units to convert"
+          ></textarea>
+          <div class="submit-button">
+            <button type="submit" id="submitButton" onclick=>Submit</button>
+          </div>
+          <div class="input-group">
+           <label>Include numbers</label>
+            <input type="checkbox" id="numbers"/>
+          </div>
+          <div class="input-group">
+            <label>Include symbols</label>
+            <input type="checkbox" id="symbols"/>
+          </div>
+
+      </div>
+    </main>
       <!-- Past tweets styled in pastTweets.css and html in client.js -->
       <section id="tweets-container"></section>
-    </main>
+
   </body>
 </html>

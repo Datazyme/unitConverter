@@ -1,13 +1,7 @@
 /* styling for entire new tweets box, html in index.html */
-.new-tweet {
-  display: flex;
-  width: 90%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0.5em;
+.input-group {
+  flex-direction: row;
 }
-
 /* styling for error messages, html in index.html */
 .error {
   color: crimson;
@@ -15,17 +9,17 @@
 }
 
 /* styling for textarea where text is entered */
-.tweet {
+.number {
   display: flex;
   justify-content: center;
-  width: 600px;
+  width: 200px;
   background-color: #f4f1ec;
   border-style: hidden;
   border-bottom: solid;
 }
 
 /* styling for tweet button and counter */
-.tweet-button {
+.submit-button {
   display: flex;
   justify-content: space-between;
 }
