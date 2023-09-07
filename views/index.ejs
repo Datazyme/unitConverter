@@ -7,11 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- External CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@800&display=swap" rel="stylesheet">
+
+  <!-- App CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
     <link rel="stylesheet" href="/vendor/border-box.css" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
-    <link rel="stylesheet" href="/styles/unitSubmitBox.css" />
+    <link rel="stylesheet" href="/styles/tempBox.css" />
 
     <script src="/vendor/jquery-3.0.0.js"></script>
     <script defer src="/scripts/app.js"></script>
@@ -42,37 +48,25 @@
     <main>
       <div class="tempBox">
         <h2>Temperature</h2>
-        <div class="error"></div>
-        <form class="form-inline">
-          <label for="number-text"></label>
-          <textarea
-            name="text"
-            class="number"
-            id="number-text"
-            placeholder="Enter units to convert"
-          ></textarea>
-        </form>
-        <div class="checkboxes">
-          <div class="input-group">
-           <label>From Farenheit</label>
-            <input type="checkbox" id="from-farenheit"/>
-          </div>
-          <div class="input-group">
-            <label>From Celsius</label>
-            <input type="checkbox" id="from-celsius"/>
-          </div>
-          <div class="input-group">
-           <label>To Farenheit</label>
-            <input type="checkbox" id="to-farenheit"/>
-          </div>
-          <div class="input-group">
-            <label>To Celsius</label>
-            <input type="checkbox" id="to-celsius"/>
-          </div>
-       </div>
-          <div class="submit-button">
-            <button type="submit" id="submitButton" onclick=>Submit</button>
-          </div>
+
+         <div class="conversion-form">
+            <input type="number" id="inputValue" placeholder="Enter value">
+            <select id="fromUnit">
+                <option value="F">Farenheit</option>
+                <option value="C">Celsius</option>
+                <option value="K">Kelvin</option>
+            </select>
+            <span>to</span>
+            <select id="toUnit">
+                <option value="F">Farenheit</option>
+                <option value="C">Celsius</option>
+                <option value="K">Kelvin</option>
+            </select>
+            <button id="convertBtn">Convert</button>
+        </div>
+        <div id="result">
+          Result will be displayed here
+        </div>
       </div>
 
         <div class="length">
