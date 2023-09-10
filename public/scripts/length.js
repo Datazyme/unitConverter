@@ -5,55 +5,12 @@ $(document).ready(function () {
   $("#convertLengthBtn").click(function () {
     // Get user input values
     const inputValue = parseFloat($("#inputLength").val());
-    console.log(inputValue);
     const fromLength = $("#fromLength").val();
     const toLength = $("#toLength").val();
 
-    //calculations
-    //From Kilometers to the rest
-    const kmToM = function (value) {
-      let meters = value * 1e3;
-      return meters;
-    };
-    const kmToDm = function (value) {
-      let decimeters = value * 1e4;
-      return decimeters;
-    };
-    const kmToCm = function (value) {
-      let centimeters = value * 1e5;
-      return centimeters.toExponential();
-    };
-    const kmToMm = function (value) {
-      let millimeters = value * 1e6;
-      return millimeters.toExponential();
-    };
-    const kmToµm = function (value) {
-      let micrometers = value * 1e9;
-      return micrometers.toExponential();
-    };
-    const kmToNm = function (value) {
-      let nanometers = value * 1e12;
-      return nanometers.toExponential();
-    };
-    const kmToPm = function (value) {
-      let picometers = value * 1e15;
-      return picometers.toExponential();
-    };
-    const kmToMi = function (value) {
-      let miles = value * 0.62137;
-      return miles.toFixed(2);
-    };
-    const kmToYd = function (value) {
-      let yards = value * 1093.61;
-      return yards.toFixed(2);
-    };
-    const kmToFt = function (value) {
-      let feet = value * 3280.84;
-      return feet.toFixed(2);
-    };
-
-    // Perform conversion
+    // Perform conversion with calculations imported in index.ejs
     let result;
+    //from kilometers
     if (fromLength === "km" && toLength === "m") {
       result = kmToM(inputValue);
     } else if (fromLength === "km" && toLength === "dm") {
@@ -74,6 +31,79 @@ $(document).ready(function () {
       result = kmToYd(inputValue);
     } else if (fromLength === "km" && toLength === "ft") {
       result = kmToFt(inputValue);
+    } else if (fromLength === "km" && toLength === "in") {
+      result = kmToIn(inputValue);
+
+      //from meter
+    } else if (fromLength === "m" && toLength === "km") {
+      result = mToKm(inputValue);
+    } else if (fromLength === "m" && toLength === "dm") {
+      result = mToDm(inputValue);
+    } else if (fromLength === "m" && toLength === "cm") {
+      result = mToCm(inputValue);
+    } else if (fromLength === "m" && toLength === "mm") {
+      result = mToMm(inputValue);
+    } else if (fromLength === "m" && toLength === "µm") {
+      result = mToµm(inputValue);
+    } else if (fromLength === "m" && toLength === "nm") {
+      result = mToNm(inputValue);
+    } else if (fromLength === "m" && toLength === "pm") {
+      result = mToPm(inputValue);
+    } else if (fromLength === "m" && toLength === "mi") {
+      result = mToMi(inputValue);
+    } else if (fromLength === "m" && toLength === "yd") {
+      result = mToYd(inputValue);
+    } else if (fromLength === "m" && toLength === "ft") {
+      result = mToFt(inputValue);
+    } else if (fromLength === "m" && toLength === "in") {
+      result = mToIn(inputValue);
+
+      //from decimeters
+    } else if (fromLength === "dm" && toLength === "km") {
+      result = dmToKm(inputValue);
+    } else if (fromLength === "dm" && toLength === "dm") {
+      result = dmToM(inputValue);
+    } else if (fromLength === "dm" && toLength === "cm") {
+      result = dmToCm(inputValue);
+    } else if (fromLength === "dm" && toLength === "mm") {
+      result = dmToMm(inputValue);
+    } else if (fromLength === "dm" && toLength === "µm") {
+      result = dmToµm(inputValue);
+    } else if (fromLength === "dm" && toLength === "nm") {
+      result = dmToNm(inputValue);
+    } else if (fromLength === "dm" && toLength === "pm") {
+      result = dmToPm(inputValue);
+    } else if (fromLength === "dm" && toLength === "mi") {
+      result = dmToMi(inputValue);
+    } else if (fromLength === "dm" && toLength === "yd") {
+      result = dmToYd(inputValue);
+    } else if (fromLength === "dm" && toLength === "ft") {
+      result = dmToFt(inputValue);
+    } else if (fromLength === "dm" && toLength === "in") {
+      result = dmToIn(inputValue);
+      //from centimeters
+    } else if (fromLength === "cm" && toLength === "km") {
+      result = cmToKm(inputValue);
+    } else if (fromLength === "cm" && toLength === "m") {
+      result = cmToM(inputValue);
+    } else if (fromLength === "cm" && toLength === "dm") {
+      result = cmToDm(inputValue);
+    } else if (fromLength === "cm" && toLength === "mm") {
+      result = cmToMm(inputValue);
+    } else if (fromLength === "cm" && toLength === "µm") {
+      result = cmToµm(inputValue);
+    } else if (fromLength === "cm" && toLength === "nm") {
+      result = cmToNm(inputValue);
+    } else if (fromLength === "cm" && toLength === "pm") {
+      result = cmToPm(inputValue);
+    } else if (fromLength === "cm" && toLength === "mi") {
+      result = cmToMi(inputValue);
+    } else if (fromLength === "cm" && toLength === "yd") {
+      result = cmToYd(inputValue);
+    } else if (fromLength === "cm" && toLength === "ft") {
+      result = cmToFt(inputValue);
+    } else if (fromLength === "cm" && toLength === "in") {
+      result = cmToIn(inputValue);
     } else {
       result = inputValue; // Same units, no conversion needed
     }
