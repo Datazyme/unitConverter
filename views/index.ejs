@@ -7,94 +7,188 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- External CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@800&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Life+Savers:wght@800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- App CSS -->
+    <!-- App CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
     <link rel="stylesheet" href="/vendor/border-box.css" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
-    <link rel="stylesheet" href="/styles/tempBox.css" />
+    <link rel="stylesheet" href="/styles/temperature.css" />
+    <link rel="stylesheet" href="/styles/length.css" />
 
+    <!--Scripts-->
     <script src="/vendor/jquery-3.0.0.js"></script>
-    <script defer src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/length.js"></script>
   </head>
 
   <body>
-<header>
-    <div class="title">
-      <span style="--i:1">U</span>
-      <span style="--i:2">N</span>
-      <span style="--i:3">I</span>
-      <span style="--i:4">T</span>
-      <span style="--i:5">*</span>
-      <span style="--i:6">C</span>
-      <span style="--i:7">O</span>
-      <span style="--i:8">N</span>
-      <span style="--i:9">V</span>
-      <span style="--i:010">E</span>
-      <span style="--i:11">R</span>
-      <span style="--i:12">T</span>
-      <span style="--i:13">r</span>
-    </div>
-
-
-
-  </header>
+    <header>
+      <div class="title">
+        <span style="--i: 1">U</span>
+        <span style="--i: 2">N</span>
+        <span style="--i: 3">I</span>
+        <span style="--i: 4">T</span>
+        <span style="--i: 5">*</span>
+        <span style="--i: 6">C</span>
+        <span style="--i: 7">O</span>
+        <span style="--i: 8">N</span>
+        <span style="--i: 9">V</span>
+        <span style="--i: 010">E</span>
+        <span style="--i: 11">R</span>
+        <span style="--i: 12">T</span>
+        <span style="--i: 13">r</span>
+      </div>
+    </header>
 
     <main>
-      <div class="tempBox">
+      <div class="temperature">
         <h2>Temperature</h2>
 
-         <div class="conversion-form">
-            <input type="number" id="inputValue" placeholder="Enter value">
-            <select id="fromUnit">
-                <option value="F">Farenheit</option>
-                <option value="C">Celsius</option>
-                <option value="K">Kelvin</option>
-            </select>
-            <span>to</span>
-            <select id="toUnit">
-                <option value="F">Farenheit</option>
-                <option value="C">Celsius</option>
-                <option value="K">Kelvin</option>
-            </select>
-            <button id="convertBtn">Convert</button>
+        <div class="conversion-form">
+          <input type="number" id="inputValue" placeholder="Value" />
+          <select id="fromUnit">
+            <option value="F">Farenheit</option>
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+          </select>
+          <span>to</span>
+          <select id="toUnit">
+            <option value="F">Farenheit</option>
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+          </select>
+          <button id="convertBtn">Convert</button>
         </div>
-        <div id="result">
-          Result will be displayed here
-        </div>
+        <div id="result">Result will be displayed here</div>
       </div>
 
-        <div class="length">
-          <h2>Length</h2>
-          <form class="form-inline">
-          <label for="length-text"></label>
-          <textarea
-            name="text-length"
-            class="length-input"
-            id="length-text"
-            placeholder="Enter units to convert"
-          ></textarea>
-          <div class="submit-button">
-            <button type="submit" id="submitButton" onclick=>Submit</button>
-          </div>
-          <div class="input-group">
-           <label>Include numbers</label>
-            <input type="checkbox" id="numbers"/>
-          </div>
-          <div class="input-group">
-            <label>Include symbols</label>
-            <input type="checkbox" id="symbols"/>
-          </div>
+      <div class="length">
+        <h2>Length</h2>
+        <div class="conversion-form">
+          <input type="number" min="0" id="inputLength" placeholder="Value" />
+          <select id="fromLength">
+            <option value="km">Kilometers</option>
+            <option value="m">Meters</option>
+            <option value="dm">Decimeters</option>
+            <option value="cm">Centimeters</option>
+            <option value="mm">Millimeter</option>
+            <option value="µm">Micrometers</option>
+            <option value="nm">Nanometers</option>
+            <option value="pm">Picometers</option>
+            <option value="mi">Miles</option>
+            <option value="yd">Yards</option>
+            <option value="ft">Feet</option>
+          </select>
+          <span>to</span>
+          <select id="toLength">
+            <option value="km">Kilometers</option>
+            <option value="m">Meters</option>
+            <option value="dm">Decimeters</option>
+            <option value="cm">Centimeters</option>
+            <option value="mm">Millimeter</option>
+            <option value="µm">Micrometers</option>
+            <option value="nm">Nanometers</option>
+            <option value="pm">Picometers</option>
+            <option value="mi">Miles</option>
+            <option value="yd">Yards</option>
+            <option value="ft">Feet</option>
+            <option value="in">Inches</option>
+          </select>
+          <button id="convertLengthBtn">Convert</button>
+        </div>
+        <div id="resultLength">Result will be displayed here</div>
+      </div>
 
+      <div class="length">
+        <h2>Weight</h2>
+        <div class="conversion-form">
+          <input type="number" id="inputValue" placeholder="Enter value" />
+          <select id="fromUnit">
+            <option value="F">Farenheit</option>
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+          </select>
+          <span>to</span>
+          <select id="toUnit">
+            <option value="F">Farenheit</option>
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+          </select>
+          <button id="convertBtn">Convert</button>
+        </div>
+        <div id="result">Result will be displayed here</div>
+      </div>
+      <div class="length">
+        <h2>Length</h2>
+        <div class="conversion-form">
+          <input type="number" id="inputValue" placeholder="Enter value" />
+          <select id="fromUnit">
+            <option value="F">Farenheit</option>
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+          </select>
+          <span>to</span>
+          <select id="toUnit">
+            <option value="F">Farenheit</option>
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+          </select>
+          <button id="convertBtn">Convert</button>
+        </div>
+        <div id="result">Result will be displayed here</div>
+      </div>
+      <div class="length">
+        <h2>Length</h2>
+        <div class="conversion-form">
+          <input type="number" id="inputValue" placeholder="Enter value" />
+          <select id="fromUnit">
+            <option value="F">Farenheit</option>
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+          </select>
+          <span>to</span>
+          <select id="toUnit">
+            <option value="F">Farenheit</option>
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+          </select>
+          <button id="convertBtn">Convert</button>
+        </div>
+        <div id="result">Result will be displayed here</div>
+      </div>
+      <div class="length">
+        <h2>Length</h2>
+        <div class="conversion-form">
+          <input type="number" id="inputValue" placeholder="Enter value" />
+          <select id="fromUnit">
+            <option value="F">Farenheit</option>
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+          </select>
+          <span>to</span>
+          <select id="toUnit">
+            <option value="F">Farenheit</option>
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+          </select>
+          <button id="convertBtn">Convert</button>
+        </div>
+        <div id="result">Result will be displayed here</div>
       </div>
     </main>
-      <!-- Past tweets styled in pastTweets.css and html in client.js -->
-      <section id="tweets-container"></section>
-
   </body>
 </html>

@@ -1,15 +1,5 @@
 // Client facing scripts here
 
-//convert temperatures function
-const farenToCel = function (inputValue) {
-  let celsius = Math.round(((inputValue - 32) / 1.8) * 10) / 10;
-  return celsius;
-};
-const celsToFaren = function (inputValue) {
-  let farenheit = Math.round(((inputValue * 9) / 5 + 32) * 10) / 10;
-  return farenheit;
-};
-
 //allows user to enter number into textbox, applies function and spits out value to same box
 $(document).ready(function () {
   $("#convertBtn").click(function () {
@@ -18,24 +8,30 @@ $(document).ready(function () {
     console.log(inputValue);
     const fromUnit = $("#fromUnit").val();
     const toUnit = $("#toUnit").val();
+
+    //calculations
     const farenToCel = function (value) {
-      let celsius = Math.round(((value - 32) / 1.8) * 10) / 10;
+      let celsius = (value - 32) / 1.8;
       return celsius;
     };
     const celsToFaren = function (value) {
-      let farenheit = Math.round(((value * 9) / 5 + 32) * 10) / 10;
+      let farenheit = (value * 9) / 5 + 32;
       return farenheit;
     };
     const celsToKelvin = function (value) {
-      let kelvin = Math.round((value + 273) * 10) / 10;
+      let kelvin = value + 273.15;
       return kelvin;
     };
     const kelvToCels = function (value) {
-      let kelvin = Math.round((value - 273) * 10) / 10;
+      let kelvin = value - 273.15;
       return kelvin;
     };
     const farentToKelv = function (value) {
-      let kelvin = (Math.round(((value - 32) * 5) / 9 + 273) * 10) / 10;
+      let kelvin = ((value - 32) * 5) / 9 + 273;
+      return kelvin;
+    };
+    const kelvToFaren = function (value) {
+      let kelvin = (value - 273.15) * 1.8 + 32;
       return kelvin;
     };
 
@@ -51,6 +47,8 @@ $(document).ready(function () {
       result = kelvToCels(inputValue);
     } else if (fromUnit === "F" && toUnit === "K") {
       result = farentToKelv(inputValue);
+    } else if (fromUnit === "K" && toUnit === "F") {
+      result = kelvToFaren(inputValue);
     } else {
       result = inputValue; // Same units, no conversion needed
     }
