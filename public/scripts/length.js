@@ -61,7 +61,7 @@ $(document).ready(function () {
       //from decimeters
     } else if (fromLength === "dm" && toLength === "km") {
       result = dmToKm(inputValue);
-    } else if (fromLength === "dm" && toLength === "dm") {
+    } else if (fromLength === "dm" && toLength === "m") {
       result = dmToM(inputValue);
     } else if (fromLength === "dm" && toLength === "cm") {
       result = dmToCm(inputValue);
@@ -81,6 +81,7 @@ $(document).ready(function () {
       result = dmToFt(inputValue);
     } else if (fromLength === "dm" && toLength === "in") {
       result = dmToIn(inputValue);
+
       //from centimeters
     } else if (fromLength === "cm" && toLength === "km") {
       result = cmToKm(inputValue);
@@ -104,6 +105,30 @@ $(document).ready(function () {
       result = cmToFt(inputValue);
     } else if (fromLength === "cm" && toLength === "in") {
       result = cmToIn(inputValue);
+
+      //from micrometers
+    } else if (fromLength === "µm" && toLength === "km") {
+      result = µmToKm(inputValue);
+    } else if (fromLength === "µm" && toLength === "m") {
+      result = µmToM(inputValue);
+    } else if (fromLength === "µm" && toLength === "dm") {
+      result = µmToDm(inputValue);
+    } else if (fromLength === "µm" && toLength === "cm") {
+      result = µmToCm(inputValue);
+    } else if (fromLength === "µm" && toLength === "mm") {
+      result = µmToMm(inputValue);
+    } else if (fromLength === "µm" && toLength === "nm") {
+      result = µmToNm(inputValue);
+    } else if (fromLength === "µm" && toLength === "pm") {
+      result = µmToPm(inputValue);
+    } else if (fromLength === "µm" && toLength === "mi") {
+      result = µmToMi(inputValue);
+    } else if (fromLength === "µm" && toLength === "yd") {
+      result = µmToYd(inputValue);
+    } else if (fromLength === "µm" && toLength === "ft") {
+      result = µmToFt(inputValue);
+    } else if (fromLength === "µm" && toLength === "in") {
+      result = µmToIn(inputValue);
     } else {
       result = inputValue; // Same units, no conversion needed
     }

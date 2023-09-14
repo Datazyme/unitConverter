@@ -1,11 +1,11 @@
 //From decimeters to the rest
 const dmToKm = function (value) {
-  let kilometers = value / 1e4;
+  let kilometers = value * 1e4;
   return kilometers.toExponential(3);
 };
 const dmToM = function (value) {
-  let decimeters = value / 10;
-  return decimeters;
+  let meters = value * 0.1;
+  return meters;
 };
 const dmToCm = function (value) {
   let centimeters = value * 10;
