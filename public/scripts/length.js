@@ -280,5 +280,6 @@ $(document).ready(function () {
     $("#resultLength").text(
       `${inputValue}${fromLength} is equal to ${result}${toLength}`
     );
+    $("#inputLength").trigger("reset");
   });
 });

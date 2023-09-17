@@ -28,20 +28,24 @@
     <link rel="stylesheet" href="/styles/layout.css" />
     <link rel="stylesheet" href="/styles/temperature.css" />
     <link rel="stylesheet" href="/styles/length.css" />
+    <link rel="stylesheet" href="/styles/weight.css" />
 
     <!--Scripts-->
     <script src="/vendor/jquery-3.0.0.js"></script>
+
+    <!--temperature-->
     <script type="text/javascript" src="/scripts/temperature.js"></script>
+
+    <!--lengths-->
+    <script type="text/javascript" src="/scripts/length.js"></script>
     <script
       type="text/javascript"
       src="/scripts/lengths/fromKilometer.js"
     ></script>
-    <script type="text/javascript" src="/scripts/length.js"></script>
     <script
       type="text/javascript"
       src="/scripts/lengths/fromDecimeter.js"
     ></script>
-
     <script type="text/javascript" src="/scripts/lengths/fromMeter.js"></script>
     <script
       type="text/javascript"
@@ -65,6 +69,34 @@
     <script
       type="text/javascript"
       src="/scripts/lengths/fromInches.js"
+    ></script>
+
+    <!--Weigths-->
+    <script type="text/javascript" src="/scripts/weight.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/weights/fromTonnes.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/scripts/weights/fromKilograms.js"
+    ></script>
+    <script type="text/javascript" src="/scripts/weights/fromGrams.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/weights/fromMilligrams.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/scripts/weights/fromMicrograms.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/scripts/weights/fromNanograms.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/scripts/weights/fromPicograms.js"
     ></script>
   </head>
 
@@ -147,25 +179,43 @@
         <div id="resultLength">Result will be displayed here</div>
       </div>
 
-      <div class="length">
+      <div class="weight">
         <h2>Weight</h2>
         <div class="conversion-form">
-          <input type="number" id="inputValue" placeholder="Enter value" />
-          <select id="fromUnit">
-            <option value="F">Farenheit</option>
-            <option value="C">Celsius</option>
-            <option value="K">Kelvin</option>
+          <input type="number" min="0" id="inputWeight" placeholder="Value" />
+          <select id="fromWeight">
+            <option value="t">Tonnes</option>
+            <option value="kg">Kilograms</option>
+            <option value="gm">Grams</option>
+            <option value="mg">Milligrams</option>
+            <option value="µg">Micrograms</option>
+            <option value="ng">Nanograms</option>
+            <option value="pg">Picograms</option>
+            <option value="tn">US Tons</option>
+            <option value="lb">Pounds</option>
+            <option value="oz">Ounces</option>
+            <option value="st">Stone</option>
           </select>
           <span>to</span>
-          <select id="toUnit">
-            <option value="F">Farenheit</option>
-            <option value="C">Celsius</option>
-            <option value="K">Kelvin</option>
+          <select id="toWeight">
+            <option value="t">Tonnes</option>
+            <option value="kg">Kilograms</option>
+            <option value="gm">Grams</option>
+            <option value="mg">Milligrams</option>
+            <option value="µg">Micrograms</option>
+            <option value="ng">Nanograms</option>
+            <option value="pg">Picograms</option>
+            <option value="tn">US Tons</option>
+            <option value="lb">Pounds</option>
+            <option value="oz">Ounces</option>
+            <option value="st">Stone</option>
           </select>
-          <button id="convertBtn">Convert</button>
+          <button id="convertWeightBtn">Convert</button>
         </div>
-        <div id="result">Result will be displayed here</div>
+        <div id="resultWeight">Result will be displayed here</div>
       </div>
+
+      <!--To be done -->
       <div class="length">
         <h2>Length</h2>
         <div class="conversion-form">
