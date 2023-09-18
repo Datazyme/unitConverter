@@ -164,6 +164,94 @@ $(document).ready(function () {
       result = picogramToOz(inputValue);
     } else if (fromWeight === "pg" && toWeight === "st") {
       result = picogramToSt(inputValue);
+
+      //from US Tons
+    } else if (fromWeight === "tn" && toWeight === "t") {
+      result = tonToTonnes(inputValue);
+    } else if (fromWeight === "tn" && toWeight === "kg") {
+      result = tonToKg(inputValue);
+    } else if (fromWeight === "tn" && toWeight === "gm") {
+      result = tonToGm(inputValue);
+    } else if (fromWeight === "tn" && toWeight === "mg") {
+      result = tonToMg(inputValue);
+    } else if (fromWeight === "tn" && toWeight === "µg") {
+      result = tonToµg(inputValue);
+    } else if (fromWeight === "tn" && toWeight === "ng") {
+      result = tonToNg(inputValue);
+    } else if (fromWeight === "tn" && toWeight === "pg") {
+      result = tonToPg(inputValue);
+    } else if (fromWeight === "tn" && toWeight === "lb") {
+      result = tonToPd(inputValue);
+    } else if (fromWeight === "tn" && toWeight === "oz") {
+      result = tonToOz(inputValue);
+    } else if (fromWeight === "tn" && toWeight === "st") {
+      result = tonToSt(inputValue);
+
+      //from pounds
+    } else if (fromWeight === "lb" && toWeight === "t") {
+      result = poundToTonnes(inputValue);
+    } else if (fromWeight === "lb" && toWeight === "kg") {
+      result = poundToKg(inputValue);
+    } else if (fromWeight === "lb" && toWeight === "gm") {
+      result = poundToGm(inputValue);
+    } else if (fromWeight === "lb" && toWeight === "mg") {
+      result = poundToMg(inputValue);
+    } else if (fromWeight === "lb" && toWeight === "µg") {
+      result = poundToµg(inputValue);
+    } else if (fromWeight === "lb" && toWeight === "ng") {
+      result = poundToNg(inputValue);
+    } else if (fromWeight === "lb" && toWeight === "pg") {
+      result = poundToPg(inputValue);
+    } else if (fromWeight === "lb" && toWeight === "tn") {
+      result = poundToTon(inputValue);
+    } else if (fromWeight === "lb" && toWeight === "oz") {
+      result = poundToOz(inputValue);
+    } else if (fromWeight === "lb" && toWeight === "st") {
+      result = poundToSt(inputValue);
+
+      //from ounces
+    } else if (fromWeight === "oz" && toWeight === "t") {
+      result = ozToTonnes(inputValue);
+    } else if (fromWeight === "oz" && toWeight === "kg") {
+      result = ozToKg(inputValue);
+    } else if (fromWeight === "oz" && toWeight === "gm") {
+      result = ozToGm(inputValue);
+    } else if (fromWeight === "oz" && toWeight === "mg") {
+      result = poundToMg(inputValue);
+    } else if (fromWeight === "oz" && toWeight === "µg") {
+      result = ozToµg(inputValue);
+    } else if (fromWeight === "oz" && toWeight === "ng") {
+      result = ozToNg(inputValue);
+    } else if (fromWeight === "oz" && toWeight === "pg") {
+      result = ozToPg(inputValue);
+    } else if (fromWeight === "oz" && toWeight === "tn") {
+      result = ozToTon(inputValue);
+    } else if (fromWeight === "oz" && toWeight === "lb") {
+      result = ozToPd(inputValue);
+    } else if (fromWeight === "oz" && toWeight === "st") {
+      result = ozToSt(inputValue);
+
+      //from stone
+    } else if (fromWeight === "st" && toWeight === "t") {
+      result = stToTonnes(inputValue);
+    } else if (fromWeight === "st" && toWeight === "kg") {
+      result = stToKg(inputValue);
+    } else if (fromWeight === "st" && toWeight === "gm") {
+      result = stToGm(inputValue);
+    } else if (fromWeight === "st" && toWeight === "mg") {
+      result = stToMg(inputValue);
+    } else if (fromWeight === "st" && toWeight === "µg") {
+      result = stToµg(inputValue);
+    } else if (fromWeight === "st" && toWeight === "ng") {
+      result = stToNg(inputValue);
+    } else if (fromWeight === "st" && toWeight === "pg") {
+      result = stToPg(inputValue);
+    } else if (fromWeight === "st" && toWeight === "tn") {
+      result = stToTon(inputValue);
+    } else if (fromWeight === "st" && toWeight === "lb") {
+      result = stToPd(inputValue);
+    } else if (fromWeight === "st" && toWeight === "oz") {
+      result = stToOz(inputValue);
     } else {
       result = inputValue; // Same units, no conversion needed
     }

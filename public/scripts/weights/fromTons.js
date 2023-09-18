@@ -1,41 +1,41 @@
 //From US tons to the rest
-const picogramToTonnes = function (value) {
-  let tonnes = value * 1e-18;
-  return tonnes.toExponential(3);
+const tonToTonnes = function (value) {
+  let tonnes = value * 0.907185;
+  return tonnes.toFixed(3);
 };
-const picogramToKg = function (value) {
-  let kilograms = value * 1e-15;
-  return kilograms.toExponential(3);
+const tonToKg = function (value) {
+  let kilograms = value * 907.185;
+  return kilograms.toFixed(3);
 };
-const picogramToGm = function (value) {
-  let grams = value * 1e-12;
+const tonToGm = function (value) {
+  let grams = value * 907185;
   return grams.toExponential(3);
 };
-const picogramToMg = function (value) {
-  let milligrams = value * 1e-9;
+const tonToMg = function (value) {
+  let milligrams = value * 9.072e8;
   return milligrams.toExponential(3);
 };
-const picogramToµg = function (value) {
-  let micrograms = value * 1e-6;
+const tonToµg = function (value) {
+  let micrograms = value * 9.072e11;
   return micrograms.toExponential(3);
 };
-const picogramToNg = function (value) {
-  let nanograms = value * 0.001;
-  return nanograms;
+const tonToNg = function (value) {
+  let nanograms = value * 9.072e14;
+  return nanograms.toExponential(3);
 };
-const picogramToTon = function (value) {
-  let tons = value * 1.1023e-18;
-  return tons.toExponential(3);
+const tonToPg = function (value) {
+  let picograms = value * 9.072e17;
+  return picograms.toExponential(3);
 };
-const picogramToPd = function (value) {
-  let pounds = value * 2.2046e-15;
-  return pounds.toExponential(3);
+const tonToPd = function (value) {
+  let pounds = value * 2000;
+  return pounds;
 };
-const picogramToOz = function (value) {
-  let ounces = value * 3.5274e-14;
+const tonToOz = function (value) {
+  let ounces = value * 32000;
   return ounces.toExponential(3);
 };
-const picogramToSt = function (value) {
-  let stone = value * 1.57473e-16;
-  return stone.toExponential(3);
+const tonToSt = function (value) {
+  let stone = value * 142.857;
+  return stone.toFixed(3);
 };
