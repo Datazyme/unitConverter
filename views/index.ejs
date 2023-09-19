@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="/styles/temperature.css" />
     <link rel="stylesheet" href="/styles/length.css" />
     <link rel="stylesheet" href="/styles/weight.css" />
+    <link rel="stylesheet" href="/styles/liquid.css" />
+    <link rel="stylesheet" href="/styles/cooking.css" />
+    <link rel="stylesheet" href="/styles/pressure.css" />
 
     <!--Scripts-->
     <script src="/vendor/jquery-3.0.0.js"></script>
@@ -111,6 +114,13 @@
       type="text/javascript"
       src="/scripts/weights/fromStones.js"
     ></script>
+
+    <!--Liquids-->
+    <script type="text/javascript" src="/scripts/liquid.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/liquids/fromLiters.js"
+    ></script>
   </head>
 
   <body>
@@ -128,7 +138,8 @@
         <span style="--i: 010">E</span>
         <span style="--i: 11">R</span>
         <span style="--i: 12">T</span>
-        <span style="--i: 13">r</span>
+        <span style="--i: 13">E</span>
+        <span style="--i: 13">R</span>
       </div>
     </header>
 
@@ -228,63 +239,82 @@
         <div id="resultWeight">Result will be displayed here</div>
       </div>
 
-      <!--To be done -->
-      <div class="length">
+      <div class="liquid">
         <h2>Liquid</h2>
         <div class="conversion-form">
-          <input type="number" id="inputValue" placeholder="Enter value" />
-          <select id="fromUnit">
-            <option value="F">Farenheit</option>
-            <option value="C">Celsius</option>
-            <option value="K">Kelvin</option>
+          <input type="number" min="0" id="inputLiquid" placeholder="Value" />
+          <select id="fromLiquid">
+            <option value="L">Liter</option>
+            <option value="ml">Milliliter</option>
+            <option value="µL">Microliter</option>
+            <option value="nL">Nanoliter</option>
+            <option value="pL">Picoliter</option>
+            <option value="US gal">US Gallon</option>
+            <option value="US qt">US Quart</option>
+            <option value="US pt">US Pint</option>
+            <option value="US fl.oz.">US Fluid Ounce</option>
+            <option value="Imp. gal.">Imperial Gallon</option>
+            <option value="Imp. qt.">Imperial Quart</option>
+            <option value="Imp. pt.">Imperial Pint</option>
+            <option value="Imp fl.oz.">Imperial Fluid Ounce</option>
           </select>
           <span>to</span>
-          <select id="toUnit">
-            <option value="F">Farenheit</option>
-            <option value="C">Celsius</option>
-            <option value="K">Kelvin</option>
+          <select id="toLiquid">
+            <option value="L">Liter</option>
+            <option value="ml">Milliliter</option>
+            <option value="µL">Microliter</option>
+            <option value="nL">Nanoliter</option>
+            <option value="pL">Picoliter</option>
+            <option value="US gal">US Gallon</option>
+            <option value="US qt">US Quart</option>
+            <option value="US pt">US Pint</option>
+            <option value="US fl.oz.">US Fluid Ounce</option>
+            <option value="Imp. gal.">Imperial Gallon</option>
+            <option value="Imp. qt.">Imperial Quart</option>
+            <option value="Imp. pt.">Imperial Pint</option>
+            <option value="Imp fl.oz.">Imperial Fluid Ounce</option>
           </select>
-          <button id="convertBtn">Convert</button>
+          <button id="convertLiquidBtn">Convert</button>
         </div>
-        <div id="result">Result will be displayed here</div>
+        <div id="resultLiquid">Result will be displayed here</div>
       </div>
-      <div class="length">
-        <h2>Area</h2>
+
+      <!--To be done -->
+      <div class="cooking">
+        <h2>Cooking</h2>
         <div class="conversion-form">
-          <input type="number" id="inputValue" placeholder="Enter value" />
-          <select id="fromUnit">
-            <option value="F">Farenheit</option>
-            <option value="C">Celsius</option>
-            <option value="K">Kelvin</option>
+          <input type="number" id="inputCooking" placeholder="Value" />
+          <select id="fromCooking">
+            <option value="F">Cups</option>
+            <option value="F">Teaspoon</option>
           </select>
           <span>to</span>
-          <select id="toUnit">
-            <option value="F">Farenheit</option>
-            <option value="C">Celsius</option>
-            <option value="K">Kelvin</option>
+          <select id="toCooking">
+            <option value="F">Cups</option>
+            <option value="F">Teaspoon</option>
           </select>
-          <button id="convertBtn">Convert</button>
+          <button id="convertCookingBtn">Convert</button>
         </div>
-        <div id="result">Result will be displayed here</div>
+        <div id="resultCooking">Result will be displayed here</div>
       </div>
-      <div class="length">
+      <div class="pressure">
         <h2>Pressure</h2>
         <div class="conversion-form">
-          <input type="number" id="inputValue" placeholder="Enter value" />
-          <select id="fromUnit">
-            <option value="F">Farenheit</option>
-            <option value="C">Celsius</option>
+          <input type="number" id="inputPressure" placeholder="Value" />
+          <select id="fromPressure">
+            <option value="F">Pascals</option>
+            <option value="C">Barr</option>
             <option value="K">Kelvin</option>
           </select>
           <span>to</span>
-          <select id="toUnit">
-            <option value="F">Farenheit</option>
-            <option value="C">Celsius</option>
+          <select id="toPressure">
+            <option value="F">Pascals</option>
+            <option value="C">Barr</option>
             <option value="K">Kelvin</option>
           </select>
-          <button id="convertBtn">Convert</button>
+          <button id="convertPressureBtn">Convert</button>
         </div>
-        <div id="result">Result will be displayed here</div>
+        <div id="resultPressure">Result will be displayed here</div>
       </div>
     </main>
   </body>

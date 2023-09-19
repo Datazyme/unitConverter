@@ -7,12 +7,12 @@ body {
 }
 
 .title {
-  width: 600px;
+  width: 100%;
   padding-left: 0.5in;
 }
 .title span {
   display: inline-block;
-  font-size: 40px;
+  font-size: 100px;
   font-weight: bold;
   color: black;
   animation: flip 5s infinite;
@@ -24,7 +24,7 @@ body {
     color: black;
   }
   to {
-    color: #351fbf;
+    color: rgb(52, 30, 70);
   }
   0%,
   80% {
