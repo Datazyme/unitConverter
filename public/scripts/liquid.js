@@ -166,6 +166,84 @@ $(document).ready(function () {
       result = usGalToImPt(inputValue);
     } else if (fromLiquid === "US gal" && toLiquid === "Imp fl.oz.") {
       result = usGalToImFlOz(inputValue);
+
+      //from US Quart
+    } else if (fromLiquid === "US qt" && toLiquid === "L") {
+      result = usQtToL(inputValue);
+    } else if (fromLiquid === "US qt" && toLiquid === "ml") {
+      result = usQtToMl(inputValue);
+    } else if (fromLiquid === "US qt" && toLiquid === "µL") {
+      result = usQtToµl(inputValue);
+    } else if (fromLiquid === "US qt" && toLiquid === "nL") {
+      result = usQtToNl(inputValue);
+    } else if (fromLiquid === "US qt" && toLiquid === "pL") {
+      result = usQtToPl(inputValue);
+    } else if (fromLiquid === "US qt" && toLiquid === "US gal") {
+      result = usQtToUsGal(inputValue);
+    } else if (fromLiquid === "US qt" && toLiquid === "US pt") {
+      result = usQtToUsPt(inputValue);
+    } else if (fromLiquid === "US qt" && toLiquid === "US fl.oz.") {
+      result = usQtToUsFlOz(inputValue);
+    } else if (fromLiquid === "US qt" && toLiquid === "Imp. gal.") {
+      result = usQtToImGal(inputValue);
+    } else if (fromLiquid === "US qt" && toLiquid === "Imp. qt.") {
+      result = usQtToImQt(inputValue);
+    } else if (fromLiquid === "US qt" && toLiquid === "Imp. pt.") {
+      result = usQtToImPt(inputValue);
+    } else if (fromLiquid === "US qt" && toLiquid === "Imp fl.oz.") {
+      result = usQtToImFlOz(inputValue);
+
+      //from US fl. oz.
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "L") {
+      result = usFlOzToL(inputValue);
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "ml") {
+      result = usFlOzToMl(inputValue);
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "µL") {
+      result = usFlOzToµl(inputValue);
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "nL") {
+      result = usFlOzToNl(inputValue);
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "pL") {
+      result = usFlOzToPl(inputValue);
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "US gal") {
+      result = usFlOzToUsGal(inputValue);
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "US qt") {
+      result = usFlOzToUsQt(inputValue);
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "US pt") {
+      result = usFlOzToUsPt(inputValue);
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "Imp. gal.") {
+      result = usFlOzToImGal(inputValue);
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "Imp. qt.") {
+      result = usFlOzToImQt(inputValue);
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "Imp. pt.") {
+      result = usFlOzToImPt(inputValue);
+    } else if (fromLiquid === "US fl.oz." && toLiquid === "Imp fl.oz.") {
+      result = usFlOzToImFlOz(inputValue);
+
+      //from Imperial Gallon.
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "L") {
+      result = imGalToL(inputValue);
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "ml") {
+      result = imGalToMl(inputValue);
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "µL") {
+      result = imGalToµl(inputValue);
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "nL") {
+      result = imGalToNl(inputValue);
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "pL") {
+      result = imGalToPl(inputValue);
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "US gal") {
+      result = imGalToUsGal(inputValue);
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "US qt") {
+      result = imGalToUsQt(inputValue);
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "US pt") {
+      result = imGalToUsPt(inputValue);
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "US fl.oz.") {
+      result = imGalToUsFlOz(inputValue);
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "Imp. qt.") {
+      result = imGalToImQt(inputValue);
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "Imp. pt.") {
+      result = imGalToImPt(inputValue);
+    } else if (fromLiquid === "Imp. gal." && toLiquid === "Imp fl.oz.") {
+      result = imGalToImFlOz(inputValue);
     } else {
       result = inputValue; // Same units, no conversion needed
     }
