@@ -47,3 +47,54 @@ const mlToImFlOz = function (value) {
   let imFlOz = value * 0.0351951;
   return imFlOz.toFixed(3);
 };
+
+//cooking conversions
+const mlToMetCups = function (value) {
+  let metCups = value * 0.0004;
+  return metCups.toExponential(3);
+};
+
+const mlToUsCups = function (value) {
+  let usCups = value * 0.0004227;
+  return usCups.toExponential(3);
+};
+
+const mlToImCups = function (value) {
+  let imCups = value * 0.000352;
+  return imCups.toExponential(3);
+};
+
+const mlToMetTbsp = function (value) {
+  let metTbsp = value * 0.066667;
+  return metTbsp.toExponential(3);
+};
+
+const mlToUsTbsp = function (value) {
+  let usTbsp = value * 0.067628;
+  return usTbsp.toFixed(3);
+};
+
+const mlToImTbsp = function (value) {
+  let imTbsp = value * 0.056312;
+  return imTbsp.toFixed(3);
+};
+
+const mlToMetTsp = function (value) {
+  let metTsp = value * 0.2;
+  return metTsp.toFixed(3);
+};
+
+const mlToUsTsp = function (value) {
+  let usTsp = value * 0.202884;
+  return usTsp.toFixed(3);
+};
+
+const mlToImTsp = function (value) {
+  let imTsp = value * 0.168936;
+  return imTsp.toFixed(3);
+};
+
+const mlToGm = function (value) {
+  let Gm = value * 1;
+  return Gm.toFixed(3);
+};

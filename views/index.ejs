@@ -157,6 +157,21 @@
       type="text/javascript"
       src="/scripts/liquids/fromImGallon.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="/scripts/liquids/fromImQuart.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/scripts/liquids/fromImPint.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/scripts/liquids/fromImFlOz.js"
+    ></script>
+
+    <!--Cooking-->
+    <script type="text/javascript" src="/scripts/cooking.js"></script>
   </head>
 
   <body>
@@ -321,13 +336,31 @@
         <div class="conversion-form">
           <input type="number" id="inputCooking" placeholder="Value" />
           <select id="fromCooking">
-            <option value="F">Cups</option>
-            <option value="F">Teaspoon</option>
+            <option value="c Metric">Metric Cups</option>
+            <option value="c US">US Cups</option>
+            <option value="c Imperial">Imperial Cups</option>
+            <option value="tbsp Metric">Metric Tablespoon</option>
+            <option value="tbsp US">US Tablespoon</option>
+            <option value="tbsp Imperial">Imperial Tablespoon</option>
+            <option value="tsp Metric">Metric Teaspoon</option>
+            <option value="tsp US">US Teaspoon</option>
+            <option value="tsp Imperial">Imperial Teaspoon</option>
+            <option value="ml">Milliliters</option>
+            <option value="g">Grams</option>
           </select>
           <span>to</span>
           <select id="toCooking">
-            <option value="F">Cups</option>
-            <option value="F">Teaspoon</option>
+            <option value="c Metric">Metric Cups</option>
+            <option value="c US">US Cups</option>
+            <option value="c Imperial">Imperial Cups</option>
+            <option value="tbsp Metric">Metric Tablespoon</option>
+            <option value="tbsp US">US Tablespoon</option>
+            <option value="tbsp Imperial">Imperial Tablespoon</option>
+            <option value="tsp Metric">Metric Teaspoon</option>
+            <option value="tsp US">US Teaspoon</option>
+            <option value="tsp Imperial">Imperial Teaspoon</option>
+            <option value="ml">Milliliters</option>
+            <option value="g">Grams</option>
           </select>
           <button id="convertCookingBtn">Convert</button>
         </div>
@@ -338,15 +371,25 @@
         <div class="conversion-form">
           <input type="number" id="inputPressure" placeholder="Value" />
           <select id="fromPressure">
-            <option value="F">Pascals</option>
-            <option value="C">Barr</option>
-            <option value="K">Kelvin</option>
+            <option value="Pa">Pascals</option>
+            <option value="kPa">Kilopascals</option>
+            <option value="bar">Bar</option>
+            <option value="torr">Torr</option>
+            <option value="psi">Pounds per square inch</option>
+            <option value="atm">Standard Atmosphere</option>
+            <option value="inHg">Inches Mercury</option>
+            <option value="mmHg">Millimeter Mercury</option>
           </select>
           <span>to</span>
           <select id="toPressure">
-            <option value="F">Pascals</option>
-            <option value="C">Barr</option>
-            <option value="K">Kelvin</option>
+            <option value="Pa">Pascals</option>
+            <option value="kPa">Kilopascals</option>
+            <option value="bar">Bar</option>
+            <option value="torr">Torr</option>
+            <option value="psi">Pounds per square inch</option>
+            <option value="atm">Standard Atmosphere</option>
+            <option value="inHg">Inches Mercury</option>
+            <option value="mmHg">Millimeter Mercury</option>
           </select>
           <button id="convertPressureBtn">Convert</button>
         </div>
