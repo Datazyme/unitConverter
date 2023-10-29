@@ -55,7 +55,7 @@ $(document).ready(function () {
 
     //Display the result
     $("#result").text(
-      `${inputValue}${fromUnit} is equal to ${result.toFixed(2)}${toUnit}`
+      `${inputValue}${fromUnit} = ${result.toFixed(2)}${toUnit}`
     );
   });
 });

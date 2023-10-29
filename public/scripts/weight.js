@@ -258,7 +258,7 @@ $(document).ready(function () {
 
     //Display the result
     $("#resultWeight").text(
-      `${inputValue}${fromWeight} is equal to ${result}${toWeight}`
+      `${inputValue}${fromWeight} = ${result}${toWeight}`
     );
   });
 });

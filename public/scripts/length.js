@@ -278,7 +278,7 @@ $(document).ready(function () {
 
     //Display the result
     $("#resultLength").text(
-      `${inputValue}${fromLength} is equal to ${result}${toLength}`
+      `${inputValue}${fromLength} = ${result}${toLength}`
     );
     $("#inputLength").trigger("reset");
   });

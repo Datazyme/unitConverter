@@ -328,7 +328,7 @@ $(document).ready(function () {
 
     //Display the result
     $("#resultLiquid").text(
-      `${inputValue} ${fromLiquid} is equal to ${result} ${toLiquid}`
+      `${inputValue} ${fromLiquid} = ${result} ${toLiquid}`
     );
   });
 });

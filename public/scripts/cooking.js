@@ -193,30 +193,30 @@ $(document).ready(function () {
 
       //From Imperial Teaspoon
     } else if (fromCooking === "tsp Imp." && toCooking === "ml") {
-      result = usTspToMl(inputValue);
+      result = imTspToMl(inputValue);
     } else if (fromCooking === "tsp Imp." && toCooking === "c Metric") {
-      result = usTspToMetCups(inputValue);
+      result = imTspToMetCups(inputValue);
     } else if (fromCooking === "tsp Imp." && toCooking === "c US") {
-      result = usTspToUsCups(inputValue);
+      result = imTspToUsCups(inputValue);
     } else if (fromCooking === "tsp Imp." && toCooking === "c Imp.") {
-      result = usTspToImCups(inputValue);
+      result = imTspToImCups(inputValue);
     } else if (fromCooking === "tsp Imp." && toCooking === "tbsp Metric") {
-      result = usTspToMetTbsp(inputValue);
+      result = imTspToMetTbsp(inputValue);
     } else if (fromCooking === "tsp Imp." && toCooking === "tbsp US") {
-      result = usTspToUsTbsp(inputValue);
+      result = imTspToUsTbsp(inputValue);
     } else if (fromCooking === "tsp Imp." && toCooking === "tbsp Imp.") {
-      result = usTspToImTbsp(inputValue);
+      result = imTspToImTbsp(inputValue);
     } else if (fromCooking === "tsp Imp." && toCooking === "tsp Metric") {
-      result = usTspToMetTsp(inputValue);
+      result = imTspToMetTsp(inputValue);
     } else if (fromCooking === "tsp Imp." && toCooking === "tsp US") {
-      result = usTspToImTsp(inputValue);
+      result = imTspToUsTsp(inputValue);
     } else {
       result = inputValue; // Same units, no conversion needed
     }
 
     //Display the result
     $("#resultCooking").text(
-      `${inputValue} ${fromCooking} is equal to ${result} ${toCooking}`
+      `${inputValue} ${fromCooking} = ${result} ${toCooking}`
     );
   });
 });

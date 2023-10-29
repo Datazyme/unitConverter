@@ -202,6 +202,19 @@
     ></script>
     <script type="text/javascript" src="/scripts/cooking/fromUsTsp.js"></script>
     <script type="text/javascript" src="/scripts/cooking/fromImTsp.js"></script>
+
+    <!--Pressure-->
+    <script type="text/javascript" src="/scripts/pressure.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/pressure/fromPascals.js"
+    ></script>
+    <script type="text/javascript" src="/scripts/pressure/fromKpa.js"></script>
+    <script type="text/javascript" src="/scripts/pressure/fromBar.js"></script>
+    <script type="text/javascript" src="/scripts/pressure/fromTorr.js"></script>
+    <script type="text/javascript" src="/scripts/pressure/fromPsi.js"></script>
+    <script type="text/javascript" src="/scripts/pressure/fromAtm.js"></script>
+    <script type="text/javascript" src="/scripts/pressure/fromInHg.js"></script>
   </head>
 
   <body>
@@ -360,11 +373,11 @@
         <div id="resultLiquid">Result will be displayed here</div>
       </div>
 
-      <!--To be done -->
+      <!--Cooking -->
       <div class="cooking">
         <h2>Cooking</h2>
         <div class="conversion-form">
-          <input type="number" id="inputCooking" placeholder="Value" />
+          <input type="number" min="0" id="inputCooking" placeholder="Value" />
           <select id="fromCooking">
             <option value="c Metric">Metric Cups</option>
             <option value="c US">US Cups</option>
@@ -396,32 +409,33 @@
         </div>
         <div id="resultCooking">Result will be displayed here</div>
       </div>
+
+      <!--Pressure -->
       <div class="pressure">
         <h2>Pressure</h2>
         <div class="conversion-form">
-          <input type="number" id="inputPressure" placeholder="Value" />
+          <input type="number" min="0" id="inputPressure" placeholder="Value" />
           <select id="fromPressure">
             <option value="Pa">Pascals</option>
             <option value="kPa">Kilopascals</option>
             <option value="bar">Bar</option>
-            <option value="torr">Torr</option>
+            <option value="torr/mmHg">Torr/mmHg</option>
             <option value="psi">Pounds per square inch</option>
             <option value="atm">Standard Atmosphere</option>
             <option value="inHg">Inches Mercury</option>
-            <option value="mmHg">Millimeter Mercury</option>
           </select>
           <span>to</span>
           <select id="toPressure">
             <option value="Pa">Pascals</option>
             <option value="kPa">Kilopascals</option>
             <option value="bar">Bar</option>
-            <option value="torr">Torr</option>
+            <option value="torr/mmHg">Torr/mmHg</option>
             <option value="psi">Pounds per square inch</option>
             <option value="atm">Standard Atmosphere</option>
             <option value="inHg">Inches Mercury</option>
-            <option value="mmHg">Millimeter Mercury</option>
           </select>
           <button id="convertPressureBtn">Convert</button>
+          <button id="resetPressure">Reset</button>
         </div>
         <div id="resultPressure">Result will be displayed here</div>
       </div>
