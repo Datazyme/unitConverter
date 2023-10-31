@@ -331,4 +331,11 @@ $(document).ready(function () {
       `${inputValue} ${fromLiquid} = ${result} ${toLiquid}`
     );
   });
+  $("#resetLiquidBtn").click(function () {
+    // reset values by each
+    $("#fromLiquid").val("L");
+    $("#toLiquid").val("L");
+    $("#inputLiquid").val("0");
+    $("#resultLiquid").text("Result will be displayed here");
+  });
 });

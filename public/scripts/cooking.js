@@ -12,27 +12,57 @@ $(document).ready(function () {
     // Perform conversion
     let result;
     //from ml
-    if (fromCooking === "ml" && toCooking === "c Metric") {
+    if (
+      fromCooking === "ml" ||
+      (fromCooking === "g" && toCooking === "c Metric")
+    ) {
       result = mlToMetCups(inputValue);
-    } else if (fromCooking === "ml" && toCooking === "c US") {
+    } else if (
+      fromCooking === "ml" ||
+      (fromCooking === "g" && toCooking === "c US")
+    ) {
       result = mlToUsCups(inputValue);
-    } else if (fromCooking === "ml" && toCooking === "c Imp.") {
+    } else if (
+      fromCooking === "ml" ||
+      (fromCooking === "g" && toCooking === "c Imp.")
+    ) {
       result = mlToImCups(inputValue);
-    } else if (fromCooking === "ml" && toCooking === "tbsp Metric") {
+    } else if (
+      fromCooking === "ml" ||
+      (fromCooking === "g" && toCooking === "tbsp Metric")
+    ) {
       result = mlToMetTbsp(inputValue);
-    } else if (fromCooking === "ml" && toCooking === "tbsp US") {
+    } else if (
+      fromCooking === "ml" ||
+      (fromCooking === "g" && toCooking === "tbsp US")
+    ) {
       result = mlToUsTbsp(inputValue);
-    } else if (fromCooking === "ml" && toCooking === "tbsp Imp.") {
+    } else if (
+      fromCooking === "ml" ||
+      (fromCooking === "g" && toCooking === "tbsp Imp.")
+    ) {
       result = mlToImTbsp(inputValue);
-    } else if (fromCooking === "ml" && toCooking === "tsp Metric") {
+    } else if (
+      fromCooking === "ml" ||
+      (fromCooking === "g" && toCooking === "tsp Metric")
+    ) {
       result = mlToMetTsp(inputValue);
-    } else if (fromCooking === "ml" && toCooking === "tsp US") {
+    } else if (
+      fromCooking === "ml" ||
+      (fromCooking === "g" && toCooking === "tsp US")
+    ) {
       result = mlToUsTsp(inputValue);
-    } else if (fromCooking === "ml" && toCooking === "tsp Imp.") {
+    } else if (
+      fromCooking === "ml" ||
+      (fromCooking === "g" && toCooking === "tsp Imp.")
+    ) {
       result = mlToImTsp(inputValue);
 
       // from metric cups
-    } else if (fromCooking === "c Metric" && toCooking === "ml") {
+    } else if (
+      (fromCooking === "c Metric" && toCooking === "ml") ||
+      (fromCooking === "c Metric" && toCooking === "g")
+    ) {
       result = metCupToMl(inputValue);
     } else if (fromCooking === "c Metric" && toCooking === "c US") {
       result = metCupToUsCups(inputValue);
@@ -52,7 +82,10 @@ $(document).ready(function () {
       result = metCupToImTsp(inputValue);
 
       //from Us Cups
-    } else if (fromCooking === "c US" && toCooking === "ml") {
+    } else if (
+      (fromCooking === "c US" && toCooking === "ml") ||
+      (fromCooking === "c US" && toCooking === "g")
+    ) {
       result = usCupToMl(inputValue);
     } else if (fromCooking === "c US" && toCooking === "c Metric") {
       result = usCupToMetCups(inputValue);
@@ -72,7 +105,10 @@ $(document).ready(function () {
       result = usCupToImTsp(inputValue);
 
       //from Imperial Cups
-    } else if (fromCooking === "c Imp." && toCooking === "ml") {
+    } else if (
+      (fromCooking === "c Imp." && toCooking === "ml") ||
+      (fromCooking === "c Imp." && toCooking === "g")
+    ) {
       result = imCupToMl(inputValue);
     } else if (fromCooking === "c Imp." && toCooking === "c Metric") {
       result = imCupToMetCups(inputValue);
@@ -92,7 +128,10 @@ $(document).ready(function () {
       result = imCupToImTsp(inputValue);
 
       //from metric Tbsp
-    } else if (fromCooking === "tbsp Metric" && toCooking === "ml") {
+    } else if (
+      (fromCooking === "tbsp Metric" && toCooking === "ml") ||
+      (fromCooking === "tbsp Metric" && toCooking === "g")
+    ) {
       result = metTbspToMl(inputValue);
     } else if (fromCooking === "tbsp Metric" && toCooking === "c Metric") {
       result = metTbspToMetCups(inputValue);
@@ -112,7 +151,10 @@ $(document).ready(function () {
       result = metTbspToImTsp(inputValue);
 
       //from US Tbsp
-    } else if (fromCooking === "tbsp US" && toCooking === "ml") {
+    } else if (
+      (fromCooking === "tbsp US" && toCooking === "ml") ||
+      (fromCooking === "tbsp US" && toCooking === "g")
+    ) {
       result = usTbspToMl(inputValue);
     } else if (fromCooking === "tbsp US" && toCooking === "c Metric") {
       result = usTbspToMetCups(inputValue);
@@ -132,7 +174,10 @@ $(document).ready(function () {
       result = usTbspToImTsp(inputValue);
 
       //from Imperial Tbsp
-    } else if (fromCooking === "tbsp Imp." && toCooking === "ml") {
+    } else if (
+      (fromCooking === "tbsp Imp." && toCooking === "ml") ||
+      (fromCooking === "tbsp Imp." && toCooking === "g")
+    ) {
       result = imTbspToMl(inputValue);
     } else if (fromCooking === "tbsp Imp." && toCooking === "c Metric") {
       result = imTbspToMetCups(inputValue);
@@ -152,7 +197,10 @@ $(document).ready(function () {
       result = imTbspToImTsp(inputValue);
 
       //From Metric Teaspoon
-    } else if (fromCooking === "tsp Metric" && toCooking === "ml") {
+    } else if (
+      (fromCooking === "tsp Metric" && toCooking === "ml") ||
+      (fromCooking === "tsp Metric" && toCooking === "g")
+    ) {
       result = metTspToMl(inputValue);
     } else if (fromCooking === "tsp Metric" && toCooking === "c Metric") {
       result = metTspToMetCups(inputValue);
@@ -172,7 +220,10 @@ $(document).ready(function () {
       result = metTspToImTsp(inputValue);
 
       //From US Teaspoon
-    } else if (fromCooking === "tsp US" && toCooking === "ml") {
+    } else if (
+      (fromCooking === "tsp US" && toCooking === "ml") ||
+      (fromCooking === "tsp US" && toCooking === "g")
+    ) {
       result = usTspToMl(inputValue);
     } else if (fromCooking === "tsp US" && toCooking === "c Metric") {
       result = usTspToMetCups(inputValue);
@@ -192,7 +243,10 @@ $(document).ready(function () {
       result = usTspToImTsp(inputValue);
 
       //From Imperial Teaspoon
-    } else if (fromCooking === "tsp Imp." && toCooking === "ml") {
+    } else if (
+      (fromCooking === "tsp Imp." && toCooking === "ml") ||
+      (fromCooking === "tsp Imp." && toCooking === "g")
+    ) {
       result = imTspToMl(inputValue);
     } else if (fromCooking === "tsp Imp." && toCooking === "c Metric") {
       result = imTspToMetCups(inputValue);
@@ -218,5 +272,12 @@ $(document).ready(function () {
     $("#resultCooking").text(
       `${inputValue} ${fromCooking} = ${result} ${toCooking}`
     );
+  });
+  $("#resetCookingBtn").click(function () {
+    // reset values by each
+    $("#fromCooking").val("c Metric");
+    $("#toCooking").val("c Metric");
+    $("#inputCooking").val("0");
+    $("#resultCooking").text("Result will be displayed here");
   });
 });

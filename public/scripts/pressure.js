@@ -117,7 +117,7 @@ $(document).ready(function () {
       `${inputValue} ${fromPressure} = ${result} ${toPressure}`
     );
   });
-  $("#resetPressure").click(function () {
+  $("#resetPressureBtn").click(function () {
     // reset values by each
     $("#fromPressure").val("Pa");
     $("#toPressure").val("Pa");
