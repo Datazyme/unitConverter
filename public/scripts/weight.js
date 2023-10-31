@@ -261,4 +261,11 @@ $(document).ready(function () {
       `${inputValue}${fromWeight} = ${result}${toWeight}`
     );
   });
+  $("#resetWeightBtn").click(function () {
+    // reset values by each
+    $("#fromWeight").val("t");
+    $("#toWeight").val("t");
+    $("#inputWeight").val("0");
+    $("#resultWeight").text("Result will be displayed here");
+  });
 });

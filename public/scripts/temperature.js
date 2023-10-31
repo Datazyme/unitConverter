@@ -4,7 +4,7 @@
 $(document).ready(function () {
   $("#convertBtn").click(function () {
     // Get user input values
-    const inputValue = parseFloat($("#inputValue").val());
+    const inputValue = parseFloat($("#inputTemp").val());
     console.log(inputValue);
     const fromUnit = $("#fromUnit").val();
     const toUnit = $("#toUnit").val();
@@ -54,8 +54,15 @@ $(document).ready(function () {
     }
 
     //Display the result
-    $("#result").text(
+    $("#resultTemp").text(
       `${inputValue}${fromUnit} = ${result.toFixed(2)}${toUnit}`
     );
+  });
+  $("#resetTempBtn").click(function () {
+    // reset values by each
+    $("#fromUnit").val("F");
+    $("#toUnit").val("F");
+    $("#inputTemp").val("0");
+    $("#resultTemp").text("Result will be displayed here");
   });
 });

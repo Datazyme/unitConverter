@@ -224,7 +224,7 @@
         <span style="--i: 2">N</span>
         <span style="--i: 3">I</span>
         <span style="--i: 4">T</span>
-        <span style="--i: 5">*</span>
+        <span style="--i: 5">&nbsp</span>
         <span style="--i: 6">C</span>
         <span style="--i: 7">O</span>
         <span style="--i: 8">N</span>
@@ -242,7 +242,7 @@
         <h2>Temperature</h2>
 
         <div class="conversion-form">
-          <input type="number" id="inputValue" placeholder="Value" />
+          <input type="number" id="inputTemp" placeholder="Value" />
           <select id="fromUnit">
             <option value="F">Farenheit</option>
             <option value="C">Celsius</option>
@@ -255,8 +255,9 @@
             <option value="K">Kelvin</option>
           </select>
           <button id="convertBtn">Convert</button>
+          <button id="resetTempBtn">Reset</button>
         </div>
-        <div id="result">Result will be displayed here</div>
+        <div id="resultTemp">Result will be displayed here</div>
       </div>
 
       <div class="length">
@@ -293,6 +294,7 @@
             <option value="in">Inches</option>
           </select>
           <button id="convertLengthBtn">Convert</button>
+          <button id="resetLengthBtn">Reset</button>
         </div>
         <div id="resultLength">Result will be displayed here</div>
       </div>
@@ -329,6 +331,7 @@
             <option value="st">Stone</option>
           </select>
           <button id="convertWeightBtn">Convert</button>
+          <button id="resetWeightBtn">Reset</button>
         </div>
         <div id="resultWeight">Result will be displayed here</div>
       </div>

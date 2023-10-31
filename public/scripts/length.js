@@ -280,6 +280,12 @@ $(document).ready(function () {
     $("#resultLength").text(
       `${inputValue}${fromLength} = ${result}${toLength}`
     );
-    $("#inputLength").trigger("reset");
+  });
+  $("#resetLengthBtn").click(function () {
+    // reset values by each
+    $("#fromLength").val("km");
+    $("#toLength").val("km");
+    $("#inputLength").val("0");
+    $("#resultLength").text("Result will be displayed here");
   });
 });
