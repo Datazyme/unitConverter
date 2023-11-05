@@ -13,6 +13,7 @@ const app = express();
 // 'dev' = Concise output colored by response status for development use.
 //         The :status token will be colored red for  error codes, yellow for client error codes, cyan for redirection codes, and uncolored for all other codes.
 app.set("views", __dirname + "/views");
+app.set("styles", __dirname + "/styles");
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(morgan("dev"));
