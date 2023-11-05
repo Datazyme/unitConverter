@@ -18,7 +18,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(
-  "/styles",
+  "styles",
   sassMiddleware({
     source: __dirname + "/styles",
     destination: __dirname + "/public/styles",
