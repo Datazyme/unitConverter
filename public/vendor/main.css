@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1b6270;
+}
+
+.title {
+  width: 100%;
+  padding-left: 0.5in;
+}
+
+.title span {
+  display: inline-block;
+  font-size: 100px;
+  font-weight: bold;
+  color: black;
+  animation: flip 5s infinite;
+  animation-delay: calc(0.2s * var(--i));
+  animation-duration: 6s;
+}
+
+@keyframes flip {
+  from {
+    color: black;
+  }
+  to {
+    color: rgb(52, 30, 70);
+  }
+}
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background-color: rgb(52, 30, 70);
+  border-style: groove;
+  border-color: rgb(52, 30, 70);
+  border-width: 1em;
+}
