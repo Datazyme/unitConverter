@@ -25,7 +25,7 @@ app.use(
     isSass: false, // false => scss, true => sass
   })
 );
-app.use(express.static(__dirname + "public"));
+app.use(express.static(__dirname + "/public"));
 
 // Home page
 // Warning: avoid creating more routes in this file!
