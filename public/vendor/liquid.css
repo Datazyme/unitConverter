@@ -23,7 +23,7 @@
 }
 
 #inputLiquid {
-  width: 20%;
+  width: 100px;
 }
 
 select,
@@ -47,4 +47,10 @@ button {
   font-weight: bolder;
   font-size: 25px;
   color: rgb(8, 8, 8);
+}
+
+@media screen and (max-width: 1000px) {
+  .liquid {
+    width: 90%;
+  }
 }

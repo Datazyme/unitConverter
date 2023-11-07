@@ -45,7 +45,22 @@ main {
   border-color: rgb(52, 30, 70);
   border-width: 1em;
 }
-
+@media screen and (max-width: 1000px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  h2 {
+    font-size: 100%;
+  }
+  .title {
+    padding-left: 0.05in;
+  }
+  .title span {
+    font-size: 200%;
+  }
+}
 // h2 {
 //   margin-bottom: 0.4em;
 // }

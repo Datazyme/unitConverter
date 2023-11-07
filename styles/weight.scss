@@ -46,3 +46,9 @@ button {
   font-size: 25px;
   color: rgb(8, 8, 8);
 }
+
+@media screen and (max-width: 1000px) {
+  .weight {
+    width: 90%;
+  }
+}
