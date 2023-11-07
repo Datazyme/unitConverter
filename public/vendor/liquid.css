@@ -53,4 +53,7 @@ button {
   .liquid {
     width: 90%;
   }
+  #inputLiquid {
+    font-size: 20px;
+  }
 }
