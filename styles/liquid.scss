@@ -19,7 +19,7 @@
 }
 
 .conversion-form {
-  font-size: 20px;
+  font-size: 10px;
 }
 
 #inputLiquid {
@@ -50,10 +50,6 @@ button {
 
 @media screen and (max-width: 1000px) {
   .liquid {
-    width: 90%;
-  }
-  #inputLiquid {
-    font-size: 20px;
     width: 90%;
   }
 }
