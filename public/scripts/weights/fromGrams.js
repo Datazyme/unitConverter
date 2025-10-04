@@ -29,7 +29,7 @@ const gramToTon = function (value) {
 };
 const gramToPd = function (value) {
   let pounds = value * 0.00220462;
-  return pounds.toExponential(3);
+  return pounds.toFixed(3);
 };
 const gramToOz = function (value) {
   let ounces = value * 0.035274;
